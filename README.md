@@ -1,4 +1,4 @@
-Nashville Housing Data Cleaning by SQL Server
+# Nashville Housing Data Cleaning by SQL Server
 
 **Industry Focus:**
 
@@ -9,18 +9,17 @@ Focusing on real estate, particularly property transactions, valuations, and cha
 The dataset is messy, containing missing values, inconsistent formatting, and potentially erroneous entries. Such issues hinder reliable analysis and decision-making for stakeholders in the real estate market, such as property investors, buyers, and urban planners. Cleaning this dataset is critical for deriving accurate insights.
 
 **Goals:**
-
-- **Clean and Standardize the Dataset**:
-- Address missing values in key columns (e.g., OwnerName, YearBuilt).
-- Correct inconsistent or incorrect formats in SaleDate and SalePrice.
-- Ensure uniformity in categorical fields like LandUse and TaxDistrict.
-- **Improve Data Quality**:
-- Identify and handle duplicate entries.
-- Validate relationships (e.g., SalePrice aligns with TotalValue).
-- **Enable Analysis and Reporting**:
-- Prepare the dataset for housing market trend analysis.
-- Ensure it supports visualization and statistical reporting.
-- **Facilitate Predictive Modeling**: Provide a high-quality dataset for applications like property price prediction or market segmentation.
+**Clean and Standardize the Dataset**:
+  - Address missing values in key columns (e.g., OwnerName, YearBuilt).
+  - Correct inconsistent or incorrect formats in SaleDate and SalePrice.
+  - Ensure uniformity in categorical fields like LandUse and TaxDistrict.
+**Improve Data Quality**:
+  - Identify and handle duplicate entries.
+  - Validate relationships (e.g., SalePrice aligns with TotalValue).
+**Enable Analysis and Reporting**:
+  - Prepare the dataset for housing market trend analysis.
+  - Ensure it supports visualization and statistical reporting.
+  - **Facilitate Predictive Modeling**: Provide a high-quality dataset for applications like property price prediction or market segmentation.
 
 **Business Use Case:**
 
