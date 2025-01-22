@@ -32,6 +32,7 @@ The primary goal of these cleaning tasks is to prepare a high-quality, standardi
 Overview of the data:
 
 ![Project Screenshot](1.png)
+
 1. Standardlizing format and value
 
 Update SaleDate to “Sale” format:
@@ -41,6 +42,7 @@ Update Nashville
 SET SaleDate = CONVERT(Date,SaleDate)
 
 ![Project Screenshot](2.png)
+
 Add new column named SaleDateConverted:
 
 ALTER TABLE Nashville
@@ -52,6 +54,7 @@ Update Nashville
 SET SaleDateConverted = CONVERT(Date, SaleDate)
 
 ![Project Screenshot](3.png)
+
 2. Filling Missing Data
 
 Populate Property Address Data
@@ -71,12 +74,14 @@ AND a.UniqueID <> b.UniqueID
 Where a.PropertyAddress is null
 
 ![Project Screenshot](4.png)
+
 3. Spliting Complex Column
 
 Split PropertyAddress to 2 different column: Address & City
 
 ![Project Screenshot](6.png)
 ![Project Screenshot](7.png)
+
 ALTER TABLE Nashville
 
 Add PropertySplitAddress Nvarchar(255);
@@ -94,11 +99,13 @@ Update Nashville
 SET PropertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddress) +1, LEN(PropertyAddress))
 
 ![Project Screenshot](8.png)
+
 Split Sucessful, now we have PropertyAddress and 2 split column named Address & City
 
 Split OwnerAddress to 3 different column named Adress, City and State
 
 ![Project Screenshot](10.png)
+
 ALTER TABLE Nashville
 
 Add OwnerSplitAddress Nvarchar(255);
@@ -124,6 +131,7 @@ Update Nashville
 SET OwnerSplitState = PARSENAME(REPLACE(OwnerAddress, ',', '.') , 1)
 
 ![Project Screenshot](11.png)
+
 Split Successful, now we have more 3 new column splited to Address, City and State
 
 4. Removing Duplicate Records
@@ -163,6 +171,7 @@ From RowNumCTE
 Where row_num > 1
 
 ![Project Screenshot](12.png)
+
 5. Optimizing and Simplifing the Dataset: Delete Unused Column include: OwnerAddress, TaxDistrict and PropertyAddress
 
 ALTER TABLE Nashville
